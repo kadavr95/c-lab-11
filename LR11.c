@@ -21,7 +21,7 @@ int main(void)//main function
  for (i = 0; i < strlen(string1); i++)
  {
   symbol=string1[i];
-  if (strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-",symbol))
+  if (strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",symbol))
   {
 	printf("%s",charword);
 	strcpy(charword,string2);

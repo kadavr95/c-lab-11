@@ -12,26 +12,6 @@ int main(void)//main function
  gets(string);
  search(string,charmax,charword,&symbol,&length);
  search(string,charmax,charword,&symbol,&length);
- //scanf("%d %d", &a,&b);
- /*for (i = 0; i < strlen(string1); i++)
- {
-  symbol=string1[i];
-  if ((strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",symbol))|| (i==(strlen(string1)-1)))
-  {
-	 if (i==(strlen(string1)-1))
-   {
-	  charword[i-j]=symbol;
-   }
-   j=i+1;
-	printf("%s\n",charword);
-	strcpy(charmax,charword);
-	memset(charword,0,sizeof(charword));
-  }
-  else
-  {
-  charword[i-j]=symbol;
-  }
- } */
  fflush(stdin);//waiting for the user
  getchar();
  return 0;

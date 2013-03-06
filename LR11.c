@@ -6,12 +6,102 @@ int search(char *string1, char *charmax, char *charword, char *symbol, int *leng
 
 int main(void)//main function
 {
- int length=-1;
- char string [80], charmax[80], charword[80],symbol;
+ int length=-1,i,j=0,l,lmax=0;
+ char string [80], charmax[80], charword[80],symbol[1];
   printf("Enter string: ");//input
  gets(string);
- search(string,charmax,charword,&symbol,&length);
- search(string,charmax,charword,&symbol,&length);
+ search(string,charmax,charword,symbol,&length);
+ search(string,charmax,charword,symbol,&length);
+ /*for (i = 0; i < strlen(string); i++)
+ {
+  symbol=string[i];
+  if ((strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",symbol))|| (i==(strlen(string)-1)))
+  {
+	 if (i==(strlen(string)-1))
+   {
+	  charword[i-j]=symbol;
+   }
+   j=i+1;
+	printf("%s\n",charword);
+	strcpy(charmax,charword);
+	memset(charword,0,sizeof(charword));
+  }
+  else
+  {
+  charword[i-j]=symbol;
+  }
+ }*/
+   /*	memset(charword,0,sizeof(charword));
+ for (i = 0; i < strlen(string); i++)
+ {
+  symbol=string[i];
+  if ((strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",symbol))|| (i==(strlen(string)-1)))
+  {
+	 if (i==(strlen(string)-1))
+   {
+	  charword[i-j]=symbol;
+   }
+   j=i+1;
+   if (length==-1) {
+   l=strlen(charword);
+	if (l>lmax) {
+	 lmax=l;
+	}
+   }
+   else
+   {
+	if (strlen(charword)==length) {
+	 printf("%s\n",charword);
+	}
+   }
+	//printf("%s\n",charword1);
+	//strcpy(charmax1,charword1);
+	memset(charword,0,sizeof(charword));
+  }
+  else
+  {
+  charword[i-j]=symbol;
+  }
+ }
+ if (length==-1) {
+  length=lmax;
+ }
+
+ 	memset(charword,0,sizeof(charword));
+ for (i = 0; i < strlen(string); i++)
+ {
+  symbol=string[i];
+  if ((strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",symbol))|| (i==(strlen(string)-1)))
+  {
+	 if (i==(strlen(string)-1))
+   {
+	  charword[i-j]=symbol;
+   }
+   j=i+1;
+   if (length==-1) {
+   l=strlen(charword);
+	if (l>lmax) {
+	 lmax=l;
+	}
+   }
+   else
+   {
+	if (strlen(charword)==length) {
+	 printf("%s\n",charword);
+	}
+   }
+	//printf("%s\n",charword1);
+	//strcpy(charmax1,charword1);
+	memset(charword,0,sizeof(charword));
+  }
+  else
+  {
+  charword[i-j]=symbol;
+  }
+ }
+ if (length==-1) {
+  length=lmax;
+ }  */
  fflush(stdin);//waiting for the user
  getchar();
  return 0;
@@ -56,3 +146,4 @@ int i,j=0,l,lmax=0;
   *length=lmax;
  }
 }
+

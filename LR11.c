@@ -7,9 +7,9 @@ int search(char *string, int *length); //прототип функции
 int main(void)//главная функция
 {
 	int length=-1;//определение переменных
-	char string [80], charmax[80];
+	char string [100000], charmax[100000];
 	printf("Enter string: ");//запрос ввода
-	gets(string);//считываание строки
+	gets(string);//считывание строки
 	search(string,&length);//определение максимальной длины слова
 	printf("Long word(s):");//надпись, сопровождающая вывод
 	search(string,&length);//поиск и вывод слов с максимальной длиной
@@ -21,7 +21,7 @@ int main(void)//главная функция
 int search(char *string, int *length)//функция работы со строкой
 {
 	int i,j=0,l,lmax=0;//определение переменных
-	char string1[80],charword1[80],symbol;
+	char string1[100000],charword1[100000],symbol;
 	memset(charword1,0,sizeof(charword1));//очистка переменной для текущего слова
 	strcpy(string1,string);//сброс данных в локальную переменную
 	for (i = 0; i < strlen(string1); i++)//цикл прохода введённой строки
@@ -40,6 +40,10 @@ int search(char *string, int *length)//функция работы со строкой
 				if (l>lmax)//условие нового максимального значения
 				{
 					lmax=l;//присваивание нового максимального значения
+				}
+				if ((strchr(" `~!@#$%^&*()_+{}|:<>?/.,\][-	",string[i-1]))==0)
+				{
+					printf("%s\n",charword1);
 				}
 			}
 			else//действия, если известна максимальная длина
